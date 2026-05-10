@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">K234111EMobile</string>
-    <string name="str_clickme">Click me\n</string>
+    <string name="str_clickme">Click me</string>
     <string name="str_welcome">Welcome to K234111E</string>
     <string name="title_activity_login">LoginActivity</string>
     <string name="prompt_email">Email</string>
@@ -12,11 +12,9 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
     <string name="str_login_system">LOGIN SYSTEM</string>
-    <string name="str_user_name">USER NAME</string>
     <string name="str_username">USER NAME</string>
     <string name="str_button_login">Login</string>
     <string name="str_button_exit">Exit</string>
-    <string name="str_password">Enter your password</string>
     <string name="str_Password">PASSWORD</string>
     <string name="str_hint_name">Enter your user name</string>
     <string name="str_hint_password">Enter your password</string>
@@ -38,6 +36,6 @@
     <string name="str_exit_message">Confirm exit???</string>
     <string name="str_yes_exit">Yes</string>
     <string name="str_no_exit">No</string>
-    <string name="str_backspace">⌫</string>
+    <string name="str_backspace">backspace</string>
 
 </resources>

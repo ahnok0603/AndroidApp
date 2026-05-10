@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">K234111EMobile</string>
+    <string name="str_clickme">Bấm vào</string>
+    <string name="str_welcome">Chào mừng đến với K234111E</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Địa chỉ email</string>
+    <string name="prompt_password">Mật khẩu</string>
+    <string name="action_sign_in">Đăng kí hoặc đăng nhập</string>
+    <string name="action_sign_in_short">Đăng nhập</string>
+    <string name="welcome">"Xin chào!"</string>
+    <string name="invalid_username">Tên đăng nhập không xác thực</string>
+    <string name="invalid_password">Mật khẩu phải trên 5 kí tự</string>
+    <string name="login_failed">"Đăng nhập thất bại"</string>
+    <string name="str_login_system">HỆ THỐNG ĐĂNG NHẬP</string>
+    <string name="str_username">TÊN ĐĂNG NHẬP</string>
+    <string name="str_button_login">Đăng nhập</string>
+    <string name="str_button_exit">Thoát</string>
+    <string name="str_Password">MẬT KHẨU</string>
+    <string name="str_hint_name">Nhập tên người dùng</string>
+    <string name="str_hint_password">Nhập mật khẩu</string>
+    <string name="str_login_successful">Đăng nhập thành công!!!!</string>
+    <string name="str_login_failed">Đăng nhập thất bại!!!!</string>
+    <string name="str_mc">MC</string>
+    <string name="str_mr">MR</string>
+    <string name="str_m_plus">M+</string>
+    <string name="str_m_minus">M-</string>
+    <string name="str_ms">MS</string>
+    <string name="str_m">M</string>
+    <string name="str_open_calculator">MỞ MÁY TÍNH</string>
+    <string name="str" />
+    <string name="str_save_login_info">Lưu thông tin đăng nhập</string>
+    <string name="str_login_role">Vai trò đăng nhập</string>
+    <string name="str_role_admin">Quản lí</string>
+    <string name="str_role_employee">Nhân viên</string>
+    <string name="str_confirm_exit">Xác nhận thoát</string>
+    <string name="str_exit_message">Bạn có muốn thoát không???</string>
+    <string name="str_yes_exit">Có</string>
+    <string name="str_no_exit">Không</string>
+    <string name="str_backspace">xóa</string>
+</resources>

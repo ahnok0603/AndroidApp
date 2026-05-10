@@ -159,7 +159,7 @@
             <Button android:layout_width="0dp" android:layout_height="match_parent" android:layout_margin="5dp" android:text="+/-" android:textColor="#E0E0E0" android:textSize="16sp" android:backgroundTint="#161926" android:fontFamily="sans-serif-light" app:cornerRadius="14dp" />
             <Button android:onClick="processChooseValue" android:layout_width="0dp" android:layout_height="match_parent" android:layout_margin="5dp" android:text="0" android:textColor="#E0E0E0" android:textSize="20sp" android:backgroundTint="#161926" android:fontFamily="sans-serif-light" app:cornerRadius="14dp" />
             <Button android:layout_width="0dp" android:layout_height="match_parent" android:layout_margin="5dp" android:text="." android:textColor="#E0E0E0" android:textSize="20sp" android:backgroundTint="#161926" android:fontFamily="sans-serif-light" app:cornerRadius="14dp" />
-            <Button android:id="@+id/buttoncal" android:layout_width="0dp" android:layout_height="match_parent" android:layout_margin="5dp" android:text="=" android:textColor="#FFFFFF" android:textSize="24sp" android:backgroundTint="#4D7EFA" android:fontFamily="sans-serif-light" app:cornerRadius="14dp" />
+            <Button android:id="@+id/buttoncal" android:onClick="processFormular" android:layout_width="0dp" android:layout_height="match_parent" android:layout_margin="5dp" android:text="=" android:textColor="#FFFFFF" android:textSize="24sp" android:backgroundTint="#4D7EFA" android:fontFamily="sans-serif-light" app:cornerRadius="14dp" />
         </TableRow>
     </TableLayout>
 
