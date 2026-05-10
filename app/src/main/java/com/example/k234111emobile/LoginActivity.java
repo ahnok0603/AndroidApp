@@ -61,7 +61,8 @@ public class LoginActivity extends AppCompatActivity {
 
             txtMessage.setText(R.string.str_login_successful);
             if (radAdmin.isChecked()) {
-                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                // Chuyển thẳng sang CalculatorActivity thay vì MainActivity
+                Intent intent = new Intent(LoginActivity.this, CalculatorActivity.class);
                 startActivity(intent);
             } else {
                 Intent intent = new Intent(LoginActivity.this, EmployeeManagementActivity.class);

@@ -5,259 +5,161 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#111318"
     android:orientation="vertical"
     tools:context=".CalculatorActivity">
 
-    <EditText
-        android:id="@+id/editFormular"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/yellow"
-        android:ems="10"
-        android:inputType="text"
-        android:textSize="48sp"
-        android:textStyle="bold" />
-
+    <!-- Màn hình hiển thị kết quả -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="0dp"
+        android:layout_weight="2.5"
+        android:gravity="bottom|end"
+        android:orientation="vertical"
+        android:padding="24dp">
 
-        <TextView
-            android:id="@+id/txtMC"
-            android:layout_width="wrap_content"
+        <EditText
+            android:id="@+id/editFormular"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/str_mc"
-            android:textAlignment="center" />
+            android:background="@null"
+            android:gravity="end"
+            android:inputType="none"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="56sp"
+            android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/txtMR"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@color/red"
-            android:text="@string/str_mr"
-            android:textAlignment="center" />
+        <!-- Memory Buttons Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="end|center_vertical"
+            android:orientation="horizontal"
+            android:paddingTop="6dp">
 
-        <TextView
-            android:id="@+id/txtMPLUS"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/str_m_plus"
-            android:textAlignment="center" />
+            <TextView
+                android:id="@+id/txtMC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#1A1D28"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/str_mc"
+                android:textAlignment="center"
+                android:textColor="#6B7496" />
 
-        <TextView
-            android:id="@+id/txtMMINUS"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@color/red"
-            android:text="@string/str_m_minus"
-            android:textAlignment="center" />
+            <TextView
+                android:id="@+id/txtMR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#1A1D28"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/str_mr"
+                android:textAlignment="center"
+                android:textColor="#6B7496" />
 
-        <TextView
-            android:id="@+id/txtMS"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/str_ms"
-            android:textAlignment="center" />
+            <TextView
+                android:id="@+id/txtMPLUS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#1A1D28"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/str_m_plus"
+                android:textAlignment="center"
+                android:textColor="#6B7496" />
 
-        <TextView
-            android:id="@+id/txtM"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@color/red"
-            android:text="@string/str_m"
-            android:textAlignment="center" />
+            <TextView
+                android:id="@+id/txtMMINUS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#1A1D28"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/str_m_minus"
+                android:textAlignment="center"
+                android:textColor="#6B7496" />
+
+            <TextView
+                android:id="@+id/txtMS"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#1A1D28"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/str_ms"
+                android:textAlignment="center"
+                android:textColor="#6B7496" />
+
+            <TextView
+                android:id="@+id/txtM"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#1A1D28"
+                android:fontFamily="sans-serif-medium"
+                android:text="@string/str_m"
+                android:textAlignment="center"
+                android:textColor="#6B7496" />
+        </LinearLayout>
     </LinearLayout>
 
+    <!-- Bàn phím máy tính -->
     <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:padding="8dp"
         android:stretchColumns="*">
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <Button
-                android:id="@+id/buttonpercentage"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="%" />
-
-            <Button
-                android:id="@+id/buttonCE"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="CE" />
-
-            <Button
-                android:id="@+id/buttonC"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="C" />
-
-            <Button
-                android:onClick="processBackspace"
-                android:id="@+id/buttonback"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="backspace" />
+        <!-- Hàng 1 -->
+        <TableRow android:layout_weight="1">
+            <Button android:layout_width="0dp" android:layout_height="match_parent" android:layout_margin="5dp" android:text="%" android:textColor="#5B82E8" android:textSize="15sp" android:backgroundTint="#161926" android:fontFamily="sans-serif-light" app:cornerRadius="14dp" />
+            <Button android:layout_width="0dp" android:layout_height="match_parent" android:layout_margin="5dp" android:text="CE" android:textColor="#5B82E8" android:textSize="15sp" android:backgroundTint="#161926" android:fontFamily="sans-serif-light" app:cornerRadius="14dp" />
+            <Button android:layout_width="0dp" android:layout_height="match_parent" android:layout_margin="5dp" android:text="C" android:textColor="#5B82E8" android:textSize="15sp" android:backgroundTint="#161926" android:fontFamily="sans-serif-light" app:cornerRadius="14dp" />
+            <Button android:id="@+id/buttonback" android:onClick="processBackspace" android:layout_width="0dp" android:layout_height="match_parent" android:layout_margin="5dp" android:text="back" android:textColor="#5B82E8" android:textSize="15sp" android:backgroundTint="#161926" android:fontFamily="sans-serif-light" app:cornerRadius="14dp" />
         </TableRow>
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
 
-            <Button
-                android:id="@+id/buttonper"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="1/x" />
-
-            <Button
-                android:id="@+id/buttonmu"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="x^2" />
-
-            <Button
-                android:id="@+id/buttonbachai"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="sqrt(x)" />
-
-            <Button
-                android:id="@+id/buttonchia"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text=":" />
+        <!-- Hàng 2 -->
+        <TableRow android:layout_weight="1">
+            <Button android:layout_width="0dp" android:layout_height="match_parent" android:layout_margin="5dp" android:text="¹/x" android:textColor="#5B82E8" android:textSize="15sp" android:backgroundTint="#161926" android:fontFamily="sans-serif-light" app:cornerRadius="14dp" />
+            <Button android:layout_width="0dp" android:layout_height="match_parent" android:layout_margin="5dp" android:text="x²" android:textColor="#5B82E8" android:textSize="15sp" android:backgroundTint="#161926" android:fontFamily="sans-serif-light" app:cornerRadius="14dp" />
+            <Button android:layout_width="0dp" android:layout_height="match_parent" android:layout_margin="5dp" android:text="√x" android:textColor="#5B82E8" android:textSize="15sp" android:backgroundTint="#161926" android:fontFamily="sans-serif-light" app:cornerRadius="14dp" />
+            <Button android:layout_width="0dp" android:layout_height="match_parent" android:layout_margin="5dp" android:text="÷" android:textColor="#5B82E8" android:textSize="22sp" android:backgroundTint="#1D243D" android:fontFamily="sans-serif-light" app:cornerRadius="14dp" />
         </TableRow>
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
 
-            <Button
-                android:onClick="processChooseValue"
-                android:id="@+id/button7"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="7" />
-
-            <Button
-                android:onClick="processChooseValue"
-                android:id="@+id/button8"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="8" />
-
-            <Button
-                android:onClick="processChooseValue"
-                android:id="@+id/button9"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="9" />
-
-            <Button
-                android:id="@+id/buttonmul"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="x" />
+        <!-- Hàng 3 -->
+        <TableRow android:layout_weight="1">
+            <Button android:onClick="processChooseValue" android:layout_width="0dp" android:layout_height="match_parent" android:layout_margin="5dp" android:text="7" android:textColor="#E0E0E0" android:textSize="20sp" android:backgroundTint="#161926" android:fontFamily="sans-serif-light" app:cornerRadius="14dp" />
+            <Button android:onClick="processChooseValue" android:layout_width="0dp" android:layout_height="match_parent" android:layout_margin="5dp" android:text="8" android:textColor="#E0E0E0" android:textSize="20sp" android:backgroundTint="#161926" android:fontFamily="sans-serif-light" app:cornerRadius="14dp" />
+            <Button android:onClick="processChooseValue" android:layout_width="0dp" android:layout_height="match_parent" android:layout_margin="5dp" android:text="9" android:textColor="#E0E0E0" android:textSize="20sp" android:backgroundTint="#161926" android:fontFamily="sans-serif-light" app:cornerRadius="14dp" />
+            <Button android:layout_width="0dp" android:layout_height="match_parent" android:layout_margin="5dp" android:text="×" android:textColor="#5B82E8" android:textSize="22sp" android:backgroundTint="#1D243D" android:fontFamily="sans-serif-light" app:cornerRadius="14dp" />
         </TableRow>
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
 
-            <Button
-                android:onClick="processChooseValue"
-                android:id="@+id/button4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="4" />
-
-            <Button
-                android:onClick="processChooseValue"
-                android:id="@+id/button5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="5" />
-
-            <Button
-                android:onClick="processChooseValue"
-                android:id="@+id/button6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="6" />
-
-            <Button
-                android:id="@+id/buttonminus"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="-" />
+        <!-- Hàng 4 -->
+        <TableRow android:layout_weight="1">
+            <Button android:onClick="processChooseValue" android:layout_width="0dp" android:layout_height="match_parent" android:layout_margin="5dp" android:text="4" android:textColor="#E0E0E0" android:textSize="20sp" android:backgroundTint="#161926" android:fontFamily="sans-serif-light" app:cornerRadius="14dp" />
+            <Button android:onClick="processChooseValue" android:layout_width="0dp" android:layout_height="match_parent" android:layout_margin="5dp" android:text="5" android:textColor="#E0E0E0" android:textSize="20sp" android:backgroundTint="#161926" android:fontFamily="sans-serif-light" app:cornerRadius="14dp" />
+            <Button android:onClick="processChooseValue" android:layout_width="0dp" android:layout_height="match_parent" android:layout_margin="5dp" android:text="6" android:textColor="#E0E0E0" android:textSize="20sp" android:backgroundTint="#161926" android:fontFamily="sans-serif-light" app:cornerRadius="14dp" />
+            <Button android:layout_width="0dp" android:layout_height="match_parent" android:layout_margin="5dp" android:text="−" android:textColor="#5B82E8" android:textSize="22sp" android:backgroundTint="#1D243D" android:fontFamily="sans-serif-light" app:cornerRadius="14dp" />
         </TableRow>
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
 
-            <Button
-                android:onClick="processChooseValue"
-                android:id="@+id/button1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="1" />
-
-            <Button
-                android:onClick="processChooseValue"
-                android:id="@+id/button2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="2" />
-
-            <Button
-                android:onClick="processChooseValue"
-                android:id="@+id/button3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="3" />
-
-            <Button
-                android:id="@+id/buttonplus"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="+" />
+        <!-- Hàng 5 -->
+        <TableRow android:layout_weight="1">
+            <Button android:onClick="processChooseValue" android:layout_width="0dp" android:layout_height="match_parent" android:layout_margin="5dp" android:text="1" android:textColor="#E0E0E0" android:textSize="20sp" android:backgroundTint="#161926" android:fontFamily="sans-serif-light" app:cornerRadius="14dp" />
+            <Button android:onClick="processChooseValue" android:layout_width="0dp" android:layout_height="match_parent" android:layout_margin="5dp" android:text="2" android:textColor="#E0E0E0" android:textSize="20sp" android:backgroundTint="#161926" android:fontFamily="sans-serif-light" app:cornerRadius="14dp" />
+            <Button android:onClick="processChooseValue" android:layout_width="0dp" android:layout_height="match_parent" android:layout_margin="5dp" android:text="3" android:textColor="#E0E0E0" android:textSize="20sp" android:backgroundTint="#161926" android:fontFamily="sans-serif-light" app:cornerRadius="14dp" />
+            <Button android:layout_width="0dp" android:layout_height="match_parent" android:layout_margin="5dp" android:text="+" android:textColor="#5B82E8" android:textSize="22sp" android:backgroundTint="#1D243D" android:fontFamily="sans-serif-light" app:cornerRadius="14dp" />
         </TableRow>
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
 
-            <Button
-                android:id="@+id/buttoncongtru"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="+/-" />
-
-            <Button
-                android:onClick="processChooseValue"
-                android:id="@+id/button0"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="0" />
-
-            <Button
-                android:id="@+id/buttoncham"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="." />
-
-            <Button
-                android:id="@+id/buttoncal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="=" />
+        <!-- Hàng 6 -->
+        <TableRow android:layout_weight="1">
+            <Button android:layout_width="0dp" android:layout_height="match_parent" android:layout_margin="5dp" android:text="+/-" android:textColor="#E0E0E0" android:textSize="16sp" android:backgroundTint="#161926" android:fontFamily="sans-serif-light" app:cornerRadius="14dp" />
+            <Button android:onClick="processChooseValue" android:layout_width="0dp" android:layout_height="match_parent" android:layout_margin="5dp" android:text="0" android:textColor="#E0E0E0" android:textSize="20sp" android:backgroundTint="#161926" android:fontFamily="sans-serif-light" app:cornerRadius="14dp" />
+            <Button android:layout_width="0dp" android:layout_height="match_parent" android:layout_margin="5dp" android:text="." android:textColor="#E0E0E0" android:textSize="20sp" android:backgroundTint="#161926" android:fontFamily="sans-serif-light" app:cornerRadius="14dp" />
+            <Button android:id="@+id/buttoncal" android:layout_width="0dp" android:layout_height="match_parent" android:layout_margin="5dp" android:text="=" android:textColor="#FFFFFF" android:textSize="24sp" android:backgroundTint="#4D7EFA" android:fontFamily="sans-serif-light" app:cornerRadius="14dp" />
         </TableRow>
     </TableLayout>
 

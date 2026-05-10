@@ -38,5 +38,6 @@
     <string name="str_exit_message">Confirm exit???</string>
     <string name="str_yes_exit">Yes</string>
     <string name="str_no_exit">No</string>
+    <string name="str_backspace">⌫</string>
 
 </resources>

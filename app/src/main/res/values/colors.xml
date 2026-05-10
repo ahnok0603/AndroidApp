@@ -4,4 +4,14 @@
     <color name="white">#FFFFFFFF</color>
     <color name="red">#FF0000</color>
     <color name="yellow">#FFFF66</color>
+
+    <!-- Dark Theme Colors for Calculator -->
+    <color name="calc_bg">#111318</color>
+    <color name="button_bg">#161926</color>
+    <color name="button_op_bg">#1D243D</color>
+    <color name="button_accent_bg">#4D7EFA</color>
+    <color name="text_accent">#5B82E8</color>
+    <color name="text_primary">#E0E0E0</color>
+    <color name="text_secondary">#6B7496</color>
+    <color name="memory_bg">#1A1D28</color>
 </resources>
