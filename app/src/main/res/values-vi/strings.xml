@@ -38,4 +38,10 @@
     <string name="str_yes_exit">Có</string>
     <string name="str_no_exit">Không</string>
     <string name="str_backspace">xóa</string>
+    <string name="str_employee_id">Employee ID</string>
+    <string name="str_employee_name">Employee Name</string>
+    <string name="str_employee_phone">Phone number</string>
+    <string name="str_delete">Delete</string>
+    <string name="str_save">Save</string>
+    <string name="str_ask_exit">Are you sure you want to exit???</string>
 </resources>

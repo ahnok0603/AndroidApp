@@ -13,12 +13,14 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="2.5"
-        android:gravity="bottom|end"
+        android:layout_weight="2"
+        android:gravity="bottom"
         android:orientation="vertical"
-        android:padding="24dp">
+        android:paddingStart="28dp"
+        android:paddingEnd="28dp"
+        android:paddingBottom="16dp">
 
-        <EditText
+        <TextView
             android:id="@+id/editFormular"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -106,60 +108,370 @@
         </LinearLayout>
     </LinearLayout>
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="8dp"
+        android:background="#181D2F" />
+
     <!-- Bàn phím máy tính -->
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="5"
-        android:padding="8dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:paddingBottom="10dp"
         android:stretchColumns="*">
+        <!-- Hàng 1: % CE C ⌫ -->
+        <TableRow
+            android:layout_height="0dp"
+            android:layout_weight="1">
 
-        <!-- Hàng 1 -->
-        <TableRow android:layout_weight="1">
-            <Button android:layout_width="0dp" android:layout_height="match_parent" android:layout_margin="5dp" android:text="%" android:textColor="#5B82E8" android:textSize="15sp" android:backgroundTint="#161926" android:fontFamily="sans-serif-light" app:cornerRadius="14dp" />
-            <Button android:layout_width="0dp" android:layout_height="match_parent" android:layout_margin="5dp" android:text="CE" android:textColor="#5B82E8" android:textSize="15sp" android:backgroundTint="#161926" android:fontFamily="sans-serif-light" app:cornerRadius="14dp" />
-            <Button android:layout_width="0dp" android:layout_height="match_parent" android:layout_margin="5dp" android:text="C" android:textColor="#5B82E8" android:textSize="15sp" android:backgroundTint="#161926" android:fontFamily="sans-serif-light" app:cornerRadius="14dp" />
-            <Button android:id="@+id/buttonback" android:onClick="processBackspace" android:layout_width="0dp" android:layout_height="match_parent" android:layout_margin="5dp" android:text="back" android:textColor="#5B82E8" android:textSize="15sp" android:backgroundTint="#161926" android:fontFamily="sans-serif-light" app:cornerRadius="14dp" />
+            <Button
+                android:id="@+id/btnPercent"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:background="#00FFFFFF"
+                android:fontFamily="sans-serif-light"
+                android:stateListAnimator="@null"
+                android:text="%"
+                android:textColor="#5B82E8"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/btnCE"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:background="#00FFFFFF"
+                android:fontFamily="sans-serif-light"
+                android:stateListAnimator="@null"
+                android:text="CE"
+                android:textColor="#5B82E8"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/btnC"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:background="#00FFFFFF"
+                android:fontFamily="sans-serif-light"
+                android:stateListAnimator="@null"
+                android:text="C"
+                android:textColor="#5B82E8"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/buttonback"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="#00FFFFFF"
+                android:fontFamily="sans-serif-light"
+                android:onClick="processBackspace"
+                android:stateListAnimator="@null"
+                android:text="Back"
+                android:textColor="#5B82E8"
+                android:textSize="16sp" />
         </TableRow>
+        <!-- Hàng 2: 1/x x² √x ÷ -->
+        <TableRow
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <Button
+                android:id="@+id/btnInverse"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:background="#00FFFFFF"
+                android:fontFamily="sans-serif-light"
+                android:stateListAnimator="@null"
+                android:text="1/x"
+                android:textColor="#5B82E8"
+                android:textSize="15sp" />
 
-        <!-- Hàng 2 -->
-        <TableRow android:layout_weight="1">
-            <Button android:layout_width="0dp" android:layout_height="match_parent" android:layout_margin="5dp" android:text="¹/x" android:textColor="#5B82E8" android:textSize="15sp" android:backgroundTint="#161926" android:fontFamily="sans-serif-light" app:cornerRadius="14dp" />
-            <Button android:layout_width="0dp" android:layout_height="match_parent" android:layout_margin="5dp" android:text="x²" android:textColor="#5B82E8" android:textSize="15sp" android:backgroundTint="#161926" android:fontFamily="sans-serif-light" app:cornerRadius="14dp" />
-            <Button android:layout_width="0dp" android:layout_height="match_parent" android:layout_margin="5dp" android:text="√x" android:textColor="#5B82E8" android:textSize="15sp" android:backgroundTint="#161926" android:fontFamily="sans-serif-light" app:cornerRadius="14dp" />
-            <Button android:layout_width="0dp" android:layout_height="match_parent" android:layout_margin="5dp" android:text="÷" android:textColor="#5B82E8" android:textSize="22sp" android:backgroundTint="#1D243D" android:fontFamily="sans-serif-light" app:cornerRadius="14dp" />
+            <Button
+                android:id="@+id/btnSquare"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:background="#00FFFFFF"
+                android:fontFamily="sans-serif-light"
+                android:stateListAnimator="@null"
+                android:text="x^2"
+                android:textColor="#5B82E8"
+                android:textSize="15sp" />
+
+            <Button
+                android:id="@+id/btnSqrt"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="#00FFFFFF"
+                android:fontFamily="sans-serif-light"
+                android:stateListAnimator="@null"
+                android:text="Sqrt(x)"
+                android:textColor="#5B82E8"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/btnDivide"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="#00FFFFFF"
+                android:fontFamily="sans-serif-light"
+                android:stateListAnimator="@null"
+                android:text="/"
+                android:textColor="#6C9AFF"
+                android:textSize="22sp" />
         </TableRow>
+        <!-- Hàng 3: 7 8 9 × -->
+        <TableRow
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <Button
+                android:id="@+id/btn7"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:background="#00FFFFFF"
+                android:fontFamily="sans-serif-light"
+                android:onClick="processChooseValue"
+                android:stateListAnimator="@null"
+                android:text="7"
+                android:textColor="#E0E0E0"
+                android:textSize="20sp" />
 
-        <!-- Hàng 3 -->
-        <TableRow android:layout_weight="1">
-            <Button android:onClick="processChooseValue" android:layout_width="0dp" android:layout_height="match_parent" android:layout_margin="5dp" android:text="7" android:textColor="#E0E0E0" android:textSize="20sp" android:backgroundTint="#161926" android:fontFamily="sans-serif-light" app:cornerRadius="14dp" />
-            <Button android:onClick="processChooseValue" android:layout_width="0dp" android:layout_height="match_parent" android:layout_margin="5dp" android:text="8" android:textColor="#E0E0E0" android:textSize="20sp" android:backgroundTint="#161926" android:fontFamily="sans-serif-light" app:cornerRadius="14dp" />
-            <Button android:onClick="processChooseValue" android:layout_width="0dp" android:layout_height="match_parent" android:layout_margin="5dp" android:text="9" android:textColor="#E0E0E0" android:textSize="20sp" android:backgroundTint="#161926" android:fontFamily="sans-serif-light" app:cornerRadius="14dp" />
-            <Button android:layout_width="0dp" android:layout_height="match_parent" android:layout_margin="5dp" android:text="×" android:textColor="#5B82E8" android:textSize="22sp" android:backgroundTint="#1D243D" android:fontFamily="sans-serif-light" app:cornerRadius="14dp" />
+            <Button
+                android:id="@+id/btn8"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:background="#00FFFFFF"
+                android:fontFamily="sans-serif-light"
+                android:onClick="processChooseValue"
+                android:stateListAnimator="@null"
+                android:text="8"
+                android:textColor="#E0E0E0"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/btn9"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:background="#00FFFFFF"
+                android:fontFamily="sans-serif-light"
+                android:onClick="processChooseValue"
+                android:stateListAnimator="@null"
+                android:text="9"
+                android:textColor="#E0E0E0"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/btnMultiply"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:background="#00FFFFFF"
+                android:fontFamily="sans-serif-light"
+                android:stateListAnimator="@null"
+                android:text="x"
+                android:textColor="#6C9AFF"
+                android:textSize="22sp" />
         </TableRow>
+        <!-- Hàng 4: 4 5 6 − -->
+        <TableRow
+            android:layout_height="0dp"
+            android:layout_weight="1">
 
-        <!-- Hàng 4 -->
-        <TableRow android:layout_weight="1">
-            <Button android:onClick="processChooseValue" android:layout_width="0dp" android:layout_height="match_parent" android:layout_margin="5dp" android:text="4" android:textColor="#E0E0E0" android:textSize="20sp" android:backgroundTint="#161926" android:fontFamily="sans-serif-light" app:cornerRadius="14dp" />
-            <Button android:onClick="processChooseValue" android:layout_width="0dp" android:layout_height="match_parent" android:layout_margin="5dp" android:text="5" android:textColor="#E0E0E0" android:textSize="20sp" android:backgroundTint="#161926" android:fontFamily="sans-serif-light" app:cornerRadius="14dp" />
-            <Button android:onClick="processChooseValue" android:layout_width="0dp" android:layout_height="match_parent" android:layout_margin="5dp" android:text="6" android:textColor="#E0E0E0" android:textSize="20sp" android:backgroundTint="#161926" android:fontFamily="sans-serif-light" app:cornerRadius="14dp" />
-            <Button android:layout_width="0dp" android:layout_height="match_parent" android:layout_margin="5dp" android:text="−" android:textColor="#5B82E8" android:textSize="22sp" android:backgroundTint="#1D243D" android:fontFamily="sans-serif-light" app:cornerRadius="14dp" />
+            <Button
+                android:id="@+id/btn4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:background="#00FFFFFF"
+                android:fontFamily="sans-serif-light"
+                android:onClick="processChooseValue"
+                android:stateListAnimator="@null"
+                android:text="4"
+                android:textColor="#E0E0E0"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/btn5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="#00FFFFFF"
+                android:fontFamily="sans-serif-light"
+                android:onClick="processChooseValue"
+                android:stateListAnimator="@null"
+                android:text="5"
+                android:textColor="#E0E0E0"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/btn6"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:background="#00FFFFFF"
+                android:fontFamily="sans-serif-light"
+                android:onClick="processChooseValue"
+                android:stateListAnimator="@null"
+                android:text="6"
+                android:textColor="#E0E0E0"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/btnMinus"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:background="#00FFFFFF"
+                android:fontFamily="sans-serif-light"
+                android:stateListAnimator="@null"
+                android:text="-"
+                android:textColor="#6C9AFF"
+                android:textSize="22sp" />
         </TableRow>
+        <!-- Hàng 5: 1 2 3 + -->
+        <TableRow
+            android:layout_height="0dp"
+            android:layout_weight="1">
 
-        <!-- Hàng 5 -->
-        <TableRow android:layout_weight="1">
-            <Button android:onClick="processChooseValue" android:layout_width="0dp" android:layout_height="match_parent" android:layout_margin="5dp" android:text="1" android:textColor="#E0E0E0" android:textSize="20sp" android:backgroundTint="#161926" android:fontFamily="sans-serif-light" app:cornerRadius="14dp" />
-            <Button android:onClick="processChooseValue" android:layout_width="0dp" android:layout_height="match_parent" android:layout_margin="5dp" android:text="2" android:textColor="#E0E0E0" android:textSize="20sp" android:backgroundTint="#161926" android:fontFamily="sans-serif-light" app:cornerRadius="14dp" />
-            <Button android:onClick="processChooseValue" android:layout_width="0dp" android:layout_height="match_parent" android:layout_margin="5dp" android:text="3" android:textColor="#E0E0E0" android:textSize="20sp" android:backgroundTint="#161926" android:fontFamily="sans-serif-light" app:cornerRadius="14dp" />
-            <Button android:layout_width="0dp" android:layout_height="match_parent" android:layout_margin="5dp" android:text="+" android:textColor="#5B82E8" android:textSize="22sp" android:backgroundTint="#1D243D" android:fontFamily="sans-serif-light" app:cornerRadius="14dp" />
+            <Button
+                android:id="@+id/btn1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:background="#00FFFFFF"
+                android:fontFamily="sans-serif-light"
+                android:onClick="processChooseValue"
+                android:stateListAnimator="@null"
+                android:text="1"
+                android:textColor="#E0E0E0"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/btn2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:background="#00FFFFFF"
+                android:fontFamily="sans-serif-light"
+                android:onClick="processChooseValue"
+                android:stateListAnimator="@null"
+                android:text="2"
+                android:textColor="#E0E0E0"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/btn3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:background="#00FFFFFF"
+                android:fontFamily="sans-serif-light"
+                android:onClick="processChooseValue"
+                android:stateListAnimator="@null"
+                android:text="3"
+                android:textColor="#E0E0E0"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/btnPlus"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:background="#00FFFFFF"
+                android:fontFamily="sans-serif-light"
+                android:stateListAnimator="@null"
+                android:text="+"
+                android:textColor="#6C9AFF"
+                android:textSize="22sp" />
         </TableRow>
+        <!-- Hàng 6: +/- 0 . = -->
+        <TableRow
+            android:layout_height="0dp"
+            android:layout_weight="1">
+            <Button
+                android:id="@+id/btnPositiveNegative"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:background="#00FFFFFF"
+                android:fontFamily="sans-serif-light"
+                android:stateListAnimator="@null"
+                android:text="+/-"
+                android:textColor="#E0E0E0"
+                android:textSize="16sp" />
 
-        <!-- Hàng 6 -->
-        <TableRow android:layout_weight="1">
-            <Button android:layout_width="0dp" android:layout_height="match_parent" android:layout_margin="5dp" android:text="+/-" android:textColor="#E0E0E0" android:textSize="16sp" android:backgroundTint="#161926" android:fontFamily="sans-serif-light" app:cornerRadius="14dp" />
-            <Button android:onClick="processChooseValue" android:layout_width="0dp" android:layout_height="match_parent" android:layout_margin="5dp" android:text="0" android:textColor="#E0E0E0" android:textSize="20sp" android:backgroundTint="#161926" android:fontFamily="sans-serif-light" app:cornerRadius="14dp" />
-            <Button android:layout_width="0dp" android:layout_height="match_parent" android:layout_margin="5dp" android:text="." android:textColor="#E0E0E0" android:textSize="20sp" android:backgroundTint="#161926" android:fontFamily="sans-serif-light" app:cornerRadius="14dp" />
-            <Button android:id="@+id/buttoncal" android:onClick="processFormular" android:layout_width="0dp" android:layout_height="match_parent" android:layout_margin="5dp" android:text="=" android:textColor="#FFFFFF" android:textSize="24sp" android:backgroundTint="#4D7EFA" android:fontFamily="sans-serif-light" app:cornerRadius="14dp" />
+            <Button
+                android:id="@+id/btn0"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:background="#00FFFFFF"
+                android:fontFamily="sans-serif-light"
+                android:onClick="processChooseValue"
+                android:stateListAnimator="@null"
+                android:text="0"
+                android:textColor="#E0E0E0"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/btnDot"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:background="#00FFFFFF"
+                android:fontFamily="sans-serif-light"
+                android:stateListAnimator="@null"
+                android:text="."
+                android:textColor="#E0E0E0"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/buttoncal"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_margin="5dp"
+                android:background="#00FFFFFF"
+                android:fontFamily="sans-serif-light"
+                android:stateListAnimator="@null"
+                android:text="="
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
         </TableRow>
     </TableLayout>
 
